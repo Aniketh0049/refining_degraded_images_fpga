@@ -1,0 +1,34 @@
+======================================================================
+HARDWARE GOLDEN MODEL
+======================================================================
+
+Running integer arithmetic unit test...
+
+1×1 convolution
+Input shape  : (8, 8, 8)
+Weight shape : (8, 8)
+Accumulator  : (8, 8, 8)
+Output       : (8, 8, 8)
+Output range : -886 to 735
+
+3×3 standard convolution
+Weight shape : (8, 8, 3, 3)
+Output shape : (8, 8, 8)
+Output range : -2439 to 2188
+
+3×3 depthwise convolution
+Weight shape : (8, 1, 3, 3)
+Output shape : (8, 8, 8)
+Output range : -910 to 1038
+
+======================================================================
+GOLDEN MODEL STATUS
+======================================================================
+1×1 convolution      : PASS
+3×3 convolution      : PASS
+3×3 depthwise        : PASS
+INT16 × INT8         : PASS
+INT32 accumulation   : PASS
+INT16 requantization : PASS
+
+STATUS: PASS
