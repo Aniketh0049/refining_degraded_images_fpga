@@ -1,0 +1,69 @@
+======================================================================
+FPGA MAC PARALLELISM ANALYSIS
+======================================================================
+
+Total computation:
+1,055,989,760 MACs/image
+1.056 GMACs/image
+
+======================================================================
+THEORETICAL COMPUTATION
+======================================================================
+
+Parallel MACs : 8
+Cycles/image  : 131,998,720
+  @ 100 MHz →  1319.99 ms/image |     0.76 images/sec
+  @ 150 MHz →   879.99 ms/image |     1.14 images/sec
+  @ 200 MHz →   659.99 ms/image |     1.52 images/sec
+
+Parallel MACs : 16
+Cycles/image  : 65,999,360
+  @ 100 MHz →   659.99 ms/image |     1.52 images/sec
+  @ 150 MHz →   440.00 ms/image |     2.27 images/sec
+  @ 200 MHz →   330.00 ms/image |     3.03 images/sec
+
+Parallel MACs : 32
+Cycles/image  : 32,999,680
+  @ 100 MHz →   330.00 ms/image |     3.03 images/sec
+  @ 150 MHz →   220.00 ms/image |     4.55 images/sec
+  @ 200 MHz →   165.00 ms/image |     6.06 images/sec
+
+Parallel MACs : 64
+Cycles/image  : 16,499,840
+  @ 100 MHz →   165.00 ms/image |     6.06 images/sec
+  @ 150 MHz →   110.00 ms/image |     9.09 images/sec
+  @ 200 MHz →    82.50 ms/image |    12.12 images/sec
+
+Parallel MACs : 128
+Cycles/image  : 8,249,920
+  @ 100 MHz →    82.50 ms/image |    12.12 images/sec
+  @ 150 MHz →    55.00 ms/image |    18.18 images/sec
+  @ 200 MHz →    41.25 ms/image |    24.24 images/sec
+
+Parallel MACs : 256
+Cycles/image  : 4,124,960
+  @ 100 MHz →    41.25 ms/image |    24.24 images/sec
+  @ 150 MHz →    27.50 ms/image |    36.36 images/sec
+  @ 200 MHz →    20.62 ms/image |    48.49 images/sec
+
+======================================================================
+MULTIPLIER / DSP ESTIMATE
+======================================================================
+Assumption: one INT16 × INT8 multiplication per MAC lane.
+   8 parallel MACs → approximately    8 multiplier lanes
+  16 parallel MACs → approximately   16 multiplier lanes
+  32 parallel MACs → approximately   32 multiplier lanes
+  64 parallel MACs → approximately   64 multiplier lanes
+ 128 parallel MACs → approximately  128 multiplier lanes
+ 256 parallel MACs → approximately  256 multiplier lanes
+
+======================================================================
+WEIGHT BANDWIDTH
+======================================================================
+INT8 weight per MAC = 1 byte
+   8 MACs →    8 bytes/cycle
+  16 MACs →   16 bytes/cycle
+  32 MACs →   32 bytes/cycle
+  64 MACs →   64 bytes/cycle
+ 128 MACs →  128 bytes/cycle
+ 256 MACs →  256 bytes/cycle
