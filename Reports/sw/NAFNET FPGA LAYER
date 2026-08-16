@@ -1,0 +1,66 @@
+================================================================================
+NAFNET FPGA LAYER-BY-LAYER HARDWARE SCHEDULE
+================================================================================
+
+  # Layer                     Type        Cin  Cout     K    H    W    MACs(M)
+----------------------------------------------------------------------------------------------------
+  1 intro                     DEPTHWISE     1    32   3x3  128  128      4.719
+  2 blocks.0.conv1            STANDARD     32    64   1x1  128  128     33.554
+  3 blocks.0.dwconv           DEPTHWISE    64    64   3x3  128  128      9.437
+  4 blocks.0.sca.conv         STANDARD     32    32   1x1    1    1      0.001
+  5 blocks.0.conv2            STANDARD     32    32   1x1  128  128     16.777
+  6 blocks.0.conv3            STANDARD     32    64   1x1  128  128     33.554
+  7 blocks.0.conv4            STANDARD     32    32   1x1  128  128     16.777
+  8 blocks.1.conv1            STANDARD     32    64   1x1  128  128     33.554
+  9 blocks.1.dwconv           DEPTHWISE    64    64   3x3  128  128      9.437
+ 10 blocks.1.sca.conv         STANDARD     32    32   1x1    1    1      0.001
+ 11 blocks.1.conv2            STANDARD     32    32   1x1  128  128     16.777
+ 12 blocks.1.conv3            STANDARD     32    64   1x1  128  128     33.554
+ 13 blocks.1.conv4            STANDARD     32    32   1x1  128  128     16.777
+ 14 blocks.2.conv1            STANDARD     32    64   1x1  128  128     33.554
+ 15 blocks.2.dwconv           DEPTHWISE    64    64   3x3  128  128      9.437
+ 16 blocks.2.sca.conv         STANDARD     32    32   1x1    1    1      0.001
+ 17 blocks.2.conv2            STANDARD     32    32   1x1  128  128     16.777
+ 18 blocks.2.conv3            STANDARD     32    64   1x1  128  128     33.554
+ 19 blocks.2.conv4            STANDARD     32    32   1x1  128  128     16.777
+ 20 blocks.3.conv1            STANDARD     32    64   1x1  128  128     33.554
+ 21 blocks.3.dwconv           DEPTHWISE    64    64   3x3  128  128      9.437
+ 22 blocks.3.sca.conv         STANDARD     32    32   1x1    1    1      0.001
+ 23 blocks.3.conv2            STANDARD     32    32   1x1  128  128     16.777
+ 24 blocks.3.conv3            STANDARD     32    64   1x1  128  128     33.554
+ 25 blocks.3.conv4            STANDARD     32    32   1x1  128  128     16.777
+ 26 blocks.4.conv1            STANDARD     32    64   1x1  128  128     33.554
+ 27 blocks.4.dwconv           DEPTHWISE    64    64   3x3  128  128      9.437
+ 28 blocks.4.sca.conv         STANDARD     32    32   1x1    1    1      0.001
+ 29 blocks.4.conv2            STANDARD     32    32   1x1  128  128     16.777
+ 30 blocks.4.conv3            STANDARD     32    64   1x1  128  128     33.554
+ 31 blocks.4.conv4            STANDARD     32    32   1x1  128  128     16.777
+ 32 blocks.5.conv1            STANDARD     32    64   1x1  128  128     33.554
+ 33 blocks.5.dwconv           DEPTHWISE    64    64   3x3  128  128      9.437
+ 34 blocks.5.sca.conv         STANDARD     32    32   1x1    1    1      0.001
+ 35 blocks.5.conv2            STANDARD     32    32   1x1  128  128     16.777
+ 36 blocks.5.conv3            STANDARD     32    64   1x1  128  128     33.554
+ 37 blocks.5.conv4            STANDARD     32    32   1x1  128  128     16.777
+ 38 blocks.6.conv1            STANDARD     32    64   1x1  128  128     33.554
+ 39 blocks.6.dwconv           DEPTHWISE    64    64   3x3  128  128      9.437
+ 40 blocks.6.sca.conv         STANDARD     32    32   1x1    1    1      0.001
+ 41 blocks.6.conv2            STANDARD     32    32   1x1  128  128     16.777
+ 42 blocks.6.conv3            STANDARD     32    64   1x1  128  128     33.554
+ 43 blocks.6.conv4            STANDARD     32    32   1x1  128  128     16.777
+ 44 blocks.7.conv1            STANDARD     32    64   1x1  128  128     33.554
+ 45 blocks.7.dwconv           DEPTHWISE    64    64   3x3  128  128      9.437
+ 46 blocks.7.sca.conv         STANDARD     32    32   1x1    1    1      0.001
+ 47 blocks.7.conv2            STANDARD     32    32   1x1  128  128     16.777
+ 48 blocks.7.conv3            STANDARD     32    64   1x1  128  128     33.554
+ 49 blocks.7.conv4            STANDARD     32    32   1x1  128  128     16.777
+ 50 ending                    STANDARD     32    32   3x3  128  128    150.995
+ 51 up                        STANDARD     32     4   3x3  128  128     18.874
+ 52 final                     DEPTHWISE     1     1   3x3  256  256      0.590
+
+================================================================================
+HARDWARE SCHEDULE SUMMARY
+================================================================================
+Convolution layers : 52
+Total MACs         : 1,055,989,760
+Total GMACs        : 1.0560
+INT8 weight memory : 73.23 KB
