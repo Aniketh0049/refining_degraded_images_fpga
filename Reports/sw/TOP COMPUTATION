@@ -1,0 +1,32 @@
+Input shape  : (1, 1, 128, 128)
+Output shape : (1, 1, 256, 256)
+
+Conv parameters : 74,990
+Total MACs      : 1,055,989,760
+Total GMACs     : 1.0560
+
+======================================================================
+TOP COMPUTATION-HEAVY LAYERS
+======================================================================
+ 1. ending                    Conv2D     MACs:    150.995 M Params:   9,248
+ 2. blocks.0.conv1            Conv2D     MACs:     33.554 M Params:   2,112
+ 3. blocks.0.conv3            Conv2D     MACs:     33.554 M Params:   2,112
+ 4. blocks.1.conv1            Conv2D     MACs:     33.554 M Params:   2,112
+ 5. blocks.1.conv3            Conv2D     MACs:     33.554 M Params:   2,112
+ 6. blocks.2.conv1            Conv2D     MACs:     33.554 M Params:   2,112
+ 7. blocks.2.conv3            Conv2D     MACs:     33.554 M Params:   2,112
+ 8. blocks.3.conv1            Conv2D     MACs:     33.554 M Params:   2,112
+ 9. blocks.3.conv3            Conv2D     MACs:     33.554 M Params:   2,112
+10. blocks.4.conv1            Conv2D     MACs:     33.554 M Params:   2,112
+11. blocks.4.conv3            Conv2D     MACs:     33.554 M Params:   2,112
+12. blocks.5.conv1            Conv2D     MACs:     33.554 M Params:   2,112
+13. blocks.5.conv3            Conv2D     MACs:     33.554 M Params:   2,112
+14. blocks.6.conv1            Conv2D     MACs:     33.554 M Params:   2,112
+15. blocks.6.conv3            Conv2D     MACs:     33.554 M Params:   2,112
+
+======================================================================
+MAC BREAKDOWN
+======================================================================
+Standard Conv MACs : 975,183,872 (92.35%)
+Depthwise MACs     : 80,805,888 (7.65%)
+Total MACs         : 1,055,989,760
